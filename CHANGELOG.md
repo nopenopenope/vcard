@@ -1,3 +1,14 @@
+8.3 (2024-08-01)
+--
+Improvements:
+* PHP8 compatibility
+* Deprecate PHP7.2 support
+* Deprecate PHP7.3 support
+* Deprecate PHP7.4 support
+* Deprecate PHP8.0 support
+* Add Docker Compose Env
+* Forked this thing!
+
 1.2.2 (2015-11-30)
 --
 Improvements:

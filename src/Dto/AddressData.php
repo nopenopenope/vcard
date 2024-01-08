@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard\Dto;
+namespace SEEC\VCard\Dto;
 
 final class AddressData
 {

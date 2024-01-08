@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard\Tests;
+namespace SEEC\VCard\Tests;
 
-use JeroenDesloovere\VCard\VCardException;
 use PHPUnit\Framework\TestCase;
+use SEEC\VCard\VCardException;
 
 final class VCardExceptionTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard;
+namespace SEEC\VCard;
 
 final class VCardException extends \Exception
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard;
+namespace SEEC\VCard;
 
 use Behat\Transliterator\Transliterator;
 use DateTimeImmutable;
@@ -402,7 +402,7 @@ class VCard implements VCardInterface
     }
 
     /**
-     * @see https://github.com/jeroendesloovere/vcard/issues/153
+     * @see https://github.com/SEEC/vcard/issues/153
      */
     protected function fold(string $text): string
     {

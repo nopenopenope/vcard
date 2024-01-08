@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard\Tests;
+namespace SEEC\VCard\Tests;
 
 use DateTimeImmutable;
 use InvalidArgumentException;
-use JeroenDesloovere\VCard\Dto\CardData;
-use JeroenDesloovere\VCard\VCard;
-use JeroenDesloovere\VCard\VCardParser;
 use PHPUnit\Framework\TestCase;
+use SEEC\VCard\Dto\CardData;
+use SEEC\VCard\VCard;
+use SEEC\VCard\VCardParser;
 
 final class VCardParserTest extends TestCase
 {
@@ -153,13 +153,13 @@ final class VCardParserTest extends TestCase
 
     public function test_it_can_get_and_set_multiple_urls_correctly(): void
     {
-        $this->vcard->addUrl('http://www.jeroendesloovere.be');
+        $this->vcard->addUrl('http://www.SEEC.be');
         $this->vcard->addUrl('http://home.example.com', 'HOME');
         $this->vcard->addUrl('http://work1.example.com', 'PREF;WORK');
         $this->vcard->addUrl('http://work2.example.com', 'PREF;WORK');
         $parser = new VCardParser($this->vcard->buildVCard());
         $resolve = $parser->getCardAtIndex(0)->getUrls();
-        $this->assertSame($resolve['default'][0], 'http://www.jeroendesloovere.be');
+        $this->assertSame($resolve['default'][0], 'http://www.SEEC.be');
         $this->assertSame($resolve['HOME'][0], 'http://home.example.com');
         $this->assertSame($resolve['PREF;WORK'][0], 'http://work1.example.com');
         $this->assertSame($resolve['PREF;WORK'][1], 'http://work2.example.com');
@@ -205,7 +205,7 @@ final class VCardParserTest extends TestCase
     public function test_it_can_set_and_get_raw_logo_correctly(): void
     {
         $image = __DIR__ . '/image.jpg';
-        $imageUrl = 'https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg';
+        $imageUrl = 'https://raw.githubusercontent.com/SEEC/vcard/master/tests/image.jpg';
 
         $card = new VCard();
         $card->addLogo($image, true);
@@ -226,7 +226,7 @@ final class VCardParserTest extends TestCase
     public function test_it_can_set_and_get_raw_photo_correctly(): void
     {
         $image = __DIR__ . '/image.jpg';
-        $imageUrl = 'https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg';
+        $imageUrl = 'https://raw.githubusercontent.com/SEEC/vcard/master/tests/image.jpg';
 
         $card = new VCard();
         $card->addPhoto($image, true);
@@ -295,7 +295,7 @@ final class VCardParserTest extends TestCase
         $this->assertSame($cards[0]->getFirstName(), 'Jeroen');
         $this->assertSame($cards[0]->getLastName(), 'Desloovere');
         $this->assertSame($cards[0]->getName(), 'Jeroen Desloovere');
-        $this->assertSame($cards[0]->getUrls()['default'][0], 'http://www.jeroendesloovere.be');
+        $this->assertSame($cards[0]->getUrls()['default'][0], 'http://www.SEEC.be');
         $this->assertSame($cards[0]->getEmails()['INTERNET'][0], 'site@example.com');
     }
 

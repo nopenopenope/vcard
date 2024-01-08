@@ -3,7 +3,7 @@
     "type": "library",
     "description": "This VCard PHP class can generate a vCard with some data. When using an iOS device it will export as a .ics file because iOS devices don't support the default .vcf files.",
     "keywords": ["vcard", "generator", ".vcf", "php"],
-    "homepage": "https://github.com/jeroendesloovere/vcard",
+    "homepage": "https://github.com/nopenopenope/vcard",
     "license": "MIT",
     "authors": [
         {
@@ -34,9 +34,9 @@
         "seec/phpunit-consecutive-params": "^1.1"
     },
     "autoload": {
-        "psr-4": { "JeroenDesloovere\\VCard\\": "src/"}
+        "psr-4": { "SEEC\\VCard\\": "src/"}
     },
     "autoload-dev": {
-        "psr-4": { "JeroenDesloovere\\VCard\\Tests\\": "tests/"}
+        "psr-4": { "SEEC\\VCard\\Tests\\": "tests/"}
     }
 }

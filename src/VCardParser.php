@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard;
+namespace SEEC\VCard;
 
 use DateTimeImmutable;
 use Iterator;
-use JeroenDesloovere\VCard\Dto\AddressData;
-use JeroenDesloovere\VCard\Dto\CardData;
+use SEEC\VCard\Dto\AddressData;
+use SEEC\VCard\Dto\CardData;
 use Webmozart\Assert\Assert;
 
 class VCardParser implements Iterator

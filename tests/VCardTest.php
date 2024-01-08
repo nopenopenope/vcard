@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace JeroenDesloovere\VCard\Tests;
+namespace SEEC\VCard\Tests;
 
 use Exception;
-use JeroenDesloovere\VCard\VCard;
 use PHPUnit\Framework\TestCase;
+use SEEC\VCard\VCard;
 
 final class VCardTest extends TestCase
 {
@@ -92,7 +92,7 @@ final class VCardTest extends TestCase
     {
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('Returned data is not an image.');
-        $this->vcard->addPhoto('https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/empty.jpg');
+        $this->vcard->addPhoto('https://raw.githubusercontent.com/SEEC/vcard/master/tests/empty.jpg');
     }
 
     public function test_it_cannot_add_an_empty_picture_as_photo(): void
@@ -222,7 +222,7 @@ final class VCardTest extends TestCase
 
     public function test_it_can_correctly_invoke_ChunkSplitUnicode(): void
     {
-        $class_handler = new \ReflectionClass('JeroenDesloovere\VCard\VCard');
+        $class_handler = new \ReflectionClass('SEEC\VCard\VCard');
         $method_handler = $class_handler->getMethod('chunkSplitUnicode');
         $method_handler->setAccessible(true);
 

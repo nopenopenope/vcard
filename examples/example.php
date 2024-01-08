@@ -7,7 +7,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__.'/../src_/VCard.php';
 
-use JeroenDesloovere\VCard\VCard;
+use SEEC\VCard\VCard;
 
 // define vcard
 $vcard = new VCard();
@@ -25,15 +25,15 @@ $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
 // add work data
 $vcard->addCompany('Siesqo');
 $vcard->addJobtitle('Web Developer');
-$vcard->addEmail('info@jeroendesloovere.be');
+$vcard->addEmail('info@SEEC.be');
 $vcard->addPhoneNumber(1234121212, 'PREF;WORK');
 $vcard->addPhoneNumber(123456789, 'WORK');
 $vcard->addAddress(null, null, 'street', 'worktown', null, 'workpostcode', 'Belgium');
-$vcard->addURL('http://www.jeroendesloovere.be');
+$vcard->addURL('http://www.SEEC.be');
 $vcard->addLabel('street, worktown, workpostcode Belgium', 'work');
 
 $vcard->addPhoto(__DIR__ . '/assets/landscape.jpeg');
-//$vcard->addPhoto('https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg');
+//$vcard->addPhoto('https://raw.githubusercontent.com/SEEC/vcard/master/tests/image.jpg');
 
 // return vcard as a string
 //return $vcard->getOutput();

@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use JeroenDesloovere\VCard\VCardParser;
+use SEEC\VCard\VCardParser;
 
 $pathToVCardExample = __DIR__ . '/assets/contacts.vcf';
 $parser = VCardParser::parseFromFile($pathToVCardExample);

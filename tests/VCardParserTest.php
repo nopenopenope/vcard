@@ -205,7 +205,7 @@ final class VCardParserTest extends TestCase
     public function test_it_can_set_and_get_raw_logo_correctly(): void
     {
         $image = __DIR__ . '/image.jpg';
-        $imageUrl = 'https://raw.githubusercontent.com/SEEC/vcard/master/tests/image.jpg';
+        $imageUrl = 'https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg';
 
         $card = new VCard();
         $card->addLogo($image, true);
@@ -226,7 +226,7 @@ final class VCardParserTest extends TestCase
     public function test_it_can_set_and_get_raw_photo_correctly(): void
     {
         $image = __DIR__ . '/image.jpg';
-        $imageUrl = 'https://raw.githubusercontent.com/SEEC/vcard/master/tests/image.jpg';
+        $imageUrl = 'https://raw.githubusercontent.com/jeroendesloovere/vcard/master/tests/image.jpg';
 
         $card = new VCard();
         $card->addPhoto($image, true);
@@ -295,7 +295,7 @@ final class VCardParserTest extends TestCase
         $this->assertSame($cards[0]->getFirstName(), 'Jeroen');
         $this->assertSame($cards[0]->getLastName(), 'Desloovere');
         $this->assertSame($cards[0]->getName(), 'Jeroen Desloovere');
-        $this->assertSame($cards[0]->getUrls()['default'][0], 'http://www.SEEC.be');
+        $this->assertSame($cards[0]->getUrls()['default'][0], 'https://www.schimmelmann.org');
         $this->assertSame($cards[0]->getEmails()['INTERNET'][0], 'site@example.com');
     }
 
